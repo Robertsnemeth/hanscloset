@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, LogIn, Search, Settings, User } from "lucide-react"
+import { Calendar, Home, Inbox, LogIn, Search } from "lucide-react"
 
 import { 
     // SignInButton,
