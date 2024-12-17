@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { ClerkProvider,
-        SignInButton,
-        SignedIn,
-        SignedOut,
-        UserButton } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import { AppSidebar } from "@/components/app-sidebar";
 
 const geistSans = Geist({

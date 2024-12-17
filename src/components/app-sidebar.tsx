@@ -1,9 +1,9 @@
 import { Calendar, Home, Inbox, LogIn, Search, Settings, User } from "lucide-react"
 
 import { 
-    SignInButton,
-    SignedIn,
-    SignedOut,
+    // SignInButton,
+    // SignedIn,
+    // SignedOut,
     UserButton } from "@clerk/nextjs";
 
 import {
