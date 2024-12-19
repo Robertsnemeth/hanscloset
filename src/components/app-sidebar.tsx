@@ -1,9 +1,10 @@
-import { Calendar, Home, Inbox, LogIn, Search } from "lucide-react"
+import { Calendar, Home, Inbox, LogIn, LogOut, Search } from "lucide-react"
 
 import { 
-    // SignInButton,
-    // SignedIn,
-    // SignedOut,
+    SignInButton,
+    SignOutButton,
+    SignedIn,
+    SignedOut,
     UserButton } from "@clerk/nextjs";
 
 import {
@@ -39,11 +40,9 @@ const items = [
     url: "#",
     icon: Search,
   },
-  {
-    title: "Login",
-    url: "#",
-    icon: LogIn,
-  },
+    // <SignedIn key="signed in"/>,
+    // <SignedOut key="signed out"/>,
+
 ]
 
 export function AppSidebar() {
@@ -64,6 +63,16 @@ export function AppSidebar() {
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
+              <SignedOut key="signed out">
+                <LogIn />
+                <SignInButton />
+              </SignedOut>
+              <SignedIn key="signed in">
+                <div className="flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground">
+                    <LogOut/>
+                    <SignOutButton />
+                </div>
+              </SignedIn>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
